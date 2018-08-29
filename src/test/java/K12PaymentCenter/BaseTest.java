@@ -45,7 +45,11 @@ public class BaseTest {
     public void Login() {
 
         LoginPage loginPage = new LoginPage(driver);
+<<<<<<< HEAD
         loginPage.getUsernameTextbox().sendKeys("autotest");
+=======
+        loginPage.getUsernameTextbox().sendKeys("mari");
+>>>>>>> master
         driver.hideKeyboard();
         loginPage.getPasswordTextbox().sendKeys("Test@1");
         driver.hideKeyboard();
