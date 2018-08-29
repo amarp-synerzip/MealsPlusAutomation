@@ -8,7 +8,6 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -46,9 +45,9 @@ public class BaseTest {
     public void Login() {
 
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.getUsernameTextbox().sendKeys("dpk");
+        loginPage.getUsernameTextbox().sendKeys("autotest");
         driver.hideKeyboard();
-        loginPage.getPasswordTextbox().sendKeys("Dpk@789");
+        loginPage.getPasswordTextbox().sendKeys("Test@1");
         driver.hideKeyboard();
         loginPage.getSignInButton().click();
         WebDriverWait wait;

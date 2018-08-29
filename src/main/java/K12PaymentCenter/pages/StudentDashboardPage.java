@@ -61,8 +61,8 @@ public class StudentDashboardPage {
         return editStudentButton;
     }
     public MobileElement getDeleteStudentButton() {
-        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDSTUDENT_BUTTON"), this.driver)));
-        deleteStudentButton = (MobileElement) (driver.findElements(By.className("android.widget.ImageView"))).get(9);
+        //wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDSTUDENT_BUTTON"), this.driver)));
+        deleteStudentButton = studentStatusTextParent.findElements(By.xpath("//*[@class='android.widget.ImageView']")).get(1);
         return deleteStudentButton;
     }
     public MobileElement getAddphotoicon() {
@@ -71,7 +71,7 @@ public class StudentDashboardPage {
         return addphotoicon;
     }
     public MobileElement getEditNameTextbox() {
-        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDSTUDENT_BUTTON"), this.driver)));
+        //wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDSTUDENT_BUTTON"), this.driver)));
         editNameTextbox = (MobileElement) (driver.findElements(By.className("android.widget.EditText"))).get(0);
         return editNameTextbox;
     }
